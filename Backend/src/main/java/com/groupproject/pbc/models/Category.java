@@ -8,18 +8,18 @@ public class Category {
 
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer catId;
 
     private String catName;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "scatId", nullable = false)
-    private SuperCategory superCategory;
+    private SuperCategory catScat;
 
-    public Category (String catName, SuperCategory superCategory) {
+    public Category(String catName, SuperCategory superCategory) {
         this.catName = catName;
-        this.superCategory = superCategory;
+        this.catScat = superCategory;
     }
 
     public Category() {
@@ -44,11 +44,11 @@ public class Category {
     }
 
     public SuperCategory getSuperCategory() {
-        return superCategory;
+        return catScat;
     }
 
     public void setSuperCategory(SuperCategory superCategory) {
-        this.superCategory = superCategory;
+        this.catScat = superCategory;
     }
 
 }
