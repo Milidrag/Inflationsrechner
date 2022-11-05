@@ -14,6 +14,10 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   build:
 
@@ -44,4 +48,6 @@ jobs:
       - name: Publish package
         run: mvn -DskipTests --batch-mode deploy --file Backend/pom.xml
         env:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
