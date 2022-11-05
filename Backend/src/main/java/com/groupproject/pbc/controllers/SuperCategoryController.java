@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
+@CrossOrigin(origins = "*")
 @RequestMapping(path="/pbc")
 public class SuperCategoryController {
 
