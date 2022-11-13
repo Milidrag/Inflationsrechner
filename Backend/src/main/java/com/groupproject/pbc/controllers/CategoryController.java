@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 
 @Controller
@@ -21,22 +22,7 @@ public class CategoryController {
     @Autowired
     private CategoryRepository categoryRepository;
 
-
-    @PostMapping(path="/category")
-    public @ResponseBody String addNewCategory (@RequestParam String name, @RequestParam Integer scatId)
-    {
-        Optional<SuperCategory> superCategoryOptional = superCategoryRepository.findById(scatId);
-
-        if (!superCategoryOptional.isPresent()) {
-            //TODO error handling, maybe try catch block?
-        }
-        SuperCategory superCategory = superCategoryOptional.get();
-        Category category = new Category(name, superCategory);
-        categoryRepository.save(category);
-        return "Saved";
-    }
-
-    @GetMapping(path="/category")
+    @GetMapping(path="/categories")
     public @ResponseBody Iterable<Category> getAllCategories()
     {
         return categoryRepository.findAll();
@@ -47,4 +33,16 @@ public class CategoryController {
     {
         return categoryRepository.findByCatName(name);
     }
+
+    @GetMapping(path="/category-by-super-category")
+    public @ResponseBody Iterable<Category> getCategoryBySuperCategory (@RequestParam Integer scatId)
+    {
+        Optional<SuperCategory> superCategory = superCategoryRepository.findById(scatId);
+
+        if (superCategory == null) {
+            //TODO error handling, maybe try catch block?
+        }
+        return categoryRepository.findByCatScat(superCategory);
+    }
+
 }

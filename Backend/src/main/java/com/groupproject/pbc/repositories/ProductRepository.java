@@ -1,6 +1,8 @@
 package com.groupproject.pbc.repositories;
 
+import com.groupproject.pbc.models.Category;
 import com.groupproject.pbc.models.Product;
+import com.groupproject.pbc.models.SuperCategory;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
@@ -20,9 +22,9 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
     List<Product> findByProdSum(int prodSum);
 
 
-    List<Product> findByProdScat(Integer prodScat);
+    List<Product> findByProdScat(SuperCategory prodScat);
 
 
-    List<Product> findByProdCat(Integer prodCat);
+    List<Product> findByProdCat(Category prodCat);
 
 }
