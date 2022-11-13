@@ -17,12 +17,12 @@ Pull postgres image: docker pull postgres
 
 Start postgres container: docker run --name postgres -e POSTGRES_PASSWORD=postgres --network="host" -p 5432:5432 -d postgres
 
-##Backend
+## Backend
 Pull Inflationsrechener Backend image: docker pull ghcr.io/milidrag/inflationsrechnerbackend:main
 
 Start Inflationsrechner Backend container: docker run --network="host" ghcr.io/milidrag/inflationsrechner:main
 
-##Frontend
+## Frontend
 Pull Inflationsrechener Frontend image: docker pull ghcr.io/milidrag/inflationsrechnerfrontend:main
 
 Start Inflationsrechner Frontend container: docker run ghcr.io/milidrag/inflationsrechnerfrontend:main
