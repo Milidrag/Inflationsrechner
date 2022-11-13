@@ -1,6 +1,7 @@
 package com.groupproject.pbc.models;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "product")
@@ -9,7 +10,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(String prodName, float prodSize, float prodInflAug, float prodInflJul, float prodInflChangeAug,
+    public Product(String prodName, BigDecimal prodSize, BigDecimal prodInflAug, BigDecimal prodInflJul, BigDecimal prodInflChangeAug,
                    int prodSum, SuperCategory prodScat, Category prodCat) {
         this.prodName = prodName;
         this.prodSize = prodSize;
@@ -27,14 +28,19 @@ public class Product {
 
     private String prodName;
 
-    private float prodSize;
+    @Column(precision = 10, scale = 2)
+    private BigDecimal prodSize;
 
-    private float prodInflAug;
+    @Column(precision = 10, scale = 2)
+    private BigDecimal prodInflAug;
 
-    private float prodInflJul;
+    @Column(precision = 10, scale = 2)
+    private BigDecimal prodInflJul;
 
-    private float prodInflChangeAug;
+    @Column(precision = 10, scale = 2)
+    private BigDecimal prodInflChangeAug;
 
+    @Column(precision = 1, scale = 0)
     private int prodSum;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
@@ -63,35 +69,35 @@ public class Product {
         this.prodName = prodName;
     }
 
-    public float getProdSize() {
+    public BigDecimal getProdSize() {
         return prodSize;
     }
 
-    public void setProdSize(float prodSize) {
+    public void setProdSize(BigDecimal prodSize) {
         this.prodSize = prodSize;
     }
 
-    public float getProdInflAug() {
+    public BigDecimal getProdInflAug() {
         return prodInflAug;
     }
 
-    public void setProdInflAug(float prodInflAug) {
+    public void setProdInflAug(BigDecimal prodInflAug) {
         this.prodInflAug = prodInflAug;
     }
 
-    public float getProdInflJul() {
+    public BigDecimal getProdInflJul() {
         return prodInflJul;
     }
 
-    public void setProdInflJul(float prodInflJul) {
+    public void setProdInflJul(BigDecimal prodInflJul) {
         this.prodInflJul = prodInflJul;
     }
 
-    public float getProdInflChangeAug() {
+    public BigDecimal getProdInflChangeAug() {
         return prodInflChangeAug;
     }
 
-    public void setProdInflChangeAug(float prodInflChangeAug) {
+    public void setProdInflChangeAug(BigDecimal prodInflChangeAug) {
         this.prodInflChangeAug = prodInflChangeAug;
     }
 
