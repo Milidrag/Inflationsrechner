@@ -24,8 +24,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: cd ./Frontend/
-      - run: npm ci 
+      - run: npm ci --prefix=./Frontend/
           
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
