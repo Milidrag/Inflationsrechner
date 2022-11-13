@@ -12,7 +12,7 @@ Second you have to import the necessary "csv"-files. You will also find them in 
 
 
 # In Docker:
-## Databse
+## Database
 Pull postgres image: docker pull postgres
 
 Start postgres container: docker run --name postgres -e POSTGRES_PASSWORD=postgres --network="host" -p 5432:5432 -d postgres
