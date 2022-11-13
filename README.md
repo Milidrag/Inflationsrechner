@@ -12,17 +12,22 @@ Second you have to import the necessary "csv"-files. You will also find them in 
 
 
 # In Docker:
+## Databse
 Pull postgres image: docker pull postgres
 
 Start postgres container: docker run --name postgres -e POSTGRES_PASSWORD=postgres --network="host" -p 5432:5432 -d postgres
 
-Pull Inflationsrechener image: docker pull ghcr.io/milidrag/inflationsrechner:main
+##Backend
+Pull Inflationsrechener Backend image: docker pull ghcr.io/milidrag/inflationsrechnerbackend:main
 
-Start Inflationsrechner container: docker run --network="host" ghcr.io/milidrag/inflationsrechner:main
+Start Inflationsrechner Backend container: docker run --network="host" ghcr.io/milidrag/inflationsrechner:main
 
-Frontend Docker Image in work...
+##Frontend
+Pull Inflationsrechener Frontend image: docker pull ghcr.io/milidrag/inflationsrechnerfrontend:main
 
-## When cloning the Repository:
+Start Inflationsrechner Frontend container: docker run ghcr.io/milidrag/inflationsrechnerfrontend:main
+
+# When cloning the Repository:
 
 cd into the Inflationsrechner directory and run:
 
