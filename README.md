@@ -20,6 +20,14 @@ Pull Inflationsrechener image: docker pull ghcr.io/milidrag/inflationsrechner:ma
 
 Start Inflationsrechner container: docker run --network="host" ghcr.io/milidrag/inflationsrechner:main
 
-Frontend Docker Image in work.
+Frontend Docker Image in work...
 
-Docker Compose File comming soon...
+##When cloning the Repository:
+
+cd into the Inflationsrechner directory and run:
+
+docker-compose up
+
+to delete the containers run:
+
+docker-compose down
