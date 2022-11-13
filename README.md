@@ -22,7 +22,7 @@ Start Inflationsrechner container: docker run --network="host" ghcr.io/milidrag/
 
 Frontend Docker Image in work...
 
-##When cloning the Repository:
+## When cloning the Repository:
 
 cd into the Inflationsrechner directory and run:
 
