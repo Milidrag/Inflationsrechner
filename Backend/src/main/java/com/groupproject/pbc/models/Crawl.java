@@ -2,6 +2,7 @@ package com.groupproject.pbc.models;
 
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
@@ -12,7 +13,7 @@ public class Crawl {
 
     }
 
-    public Crawl(float crawlPrice, Date crawlDate, Product crawlProd) {
+    public Crawl(BigDecimal crawlPrice, Date crawlDate, Product crawlProd) {
         this.crawlPrice = crawlPrice;
         this.crawlDate = crawlDate;
         this.crawlProd = crawlProd;
@@ -22,7 +23,8 @@ public class Crawl {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer crawlId;
 
-    private float crawlPrice;
+    @Column(precision = 10, scale = 2)
+    private BigDecimal crawlPrice;
 
     private Date crawlDate;
 
@@ -39,11 +41,11 @@ public class Crawl {
         this.crawlId = crawlId;
     }
 
-    public float getCrawlPrice() {
+    public BigDecimal getCrawlPrice() {
         return crawlPrice;
     }
 
-    public void setCrawlPrice(float crawlPrice) {
+    public void setCrawlPrice(BigDecimal crawlPrice) {
         this.crawlPrice = crawlPrice;
     }
 

@@ -18,18 +18,7 @@ public class SuperCategoryController {
     @Autowired
     private CategoryRepository categoryRepository;
 
-
-    @PostMapping(path="/super-category")
-    public @ResponseBody String addNewSuperCategory (@RequestParam String name)
-    {
-
-        SuperCategory superCategory = new SuperCategory();
-        superCategory.setScatName(name);
-        superCategoryRepository.save(superCategory);
-        return "Saved";
-    }
-
-    @GetMapping(path="/super-category")
+    @GetMapping(path="/super-categories")
     public @ResponseBody Iterable<SuperCategory> getAllSuperCategories()
     {
         return superCategoryRepository.findAll();
