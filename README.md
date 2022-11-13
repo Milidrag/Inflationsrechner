@@ -13,9 +13,11 @@ Second you have to import the necessary "csv"-files. You will also find them in 
 
 # In Docker:
 Pull postgres image: docker pull postgres
+
 Start postgres container: docker run --name postgres -e POSTGRES_PASSWORD=postgres --network="host" -p 5432:5432 -d postgres
 
 Pull Inflationsrechener image: docker pull ghcr.io/milidrag/inflationsrechner:main
+
 Start Inflationsrechner container: docker run --network="host" ghcr.io/milidrag/inflationsrechner:main
 
 Frontend Docker Image in work.
