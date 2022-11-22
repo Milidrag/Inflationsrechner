@@ -1,45 +1,45 @@
-﻿ALLES;0;0
-Nahrungsmittel;1;1
-Alkoholfreie Getränke;2;2
-Alkoholische Getränke;3;2
-Tabak;4;2
-Bekleidung;5;3
-Schuhe einschließlich Reparatur;6;4
-Gezahlte Wohnungsmieten;7;4
-Instandhaltung und Reparatur der Wohnung;8;4
-Wasserversorgung und sonstige Dienstleistungen (Wohnung);9;4
-Elektrizität. Gas und andere Brennstoffe;10;4
-Einrichtungsgegenstände und Bodenbeläge;11;5
-Heimtextilien;12;5
-Haushaltsgeräte;13;5
-Glaswaren. Geschirr u. a. Gebrauchsgüter f. d. Haushalt;14;5
-Werkzeuge und Geräte für Haus und Garten;15;5
-Waren und Dienstleistungen für die laufende Haushaltsf.;16;5
-Medizinische Erzeugnisse;17;6
-Ambulante Dienstleistungen;18;6
-Krankenhausdienstleistungen;19;6
-Kauf von Fahrzeugen;20;7
-Betrieb von privaten Verkehrsmitteln;21;7
-Verkehrsdienstleistungen;22;8
-Postdienste;23;8
-Telefonapparate und Telefaxgeräte;24;8
-Telefon- und Telefaxdienste;25;9
-Geräte f. Audiovision. Fotografie und Datenverarbeitung;26;9
-Sonstige wesentliche Gebrauchsgüter für Freizeit und Kultur;27;9
-Sonstige Freizeitartikel u. -geräte. Gartenartikel u. Heimtiere;28;9
-Freizeit- und Kulturdienstleistungen;29;9
-Zeitungen. Bücher und Schreibwaren;30;9
-Pauschalreisen;31;10
-Kindergarten. Volksschule. Internat;32;10
-Mittelschule. Schulausflüge;33;10
-AHS oder BHS. 9. - 13. Schulstufe;34;10
-Studiengebühren;35;10
-Kurse;36;11
-Bewirtungsdienstleistungen;37;11
-Beherbergungsdienstleistungen;38;12
-Körperpflege;39;12
-Persönliche Gebrauchsgegenstände. a.n.g.;40;12
-Sozialschutz;41;12
-Versicherungen;42;12
-Finanzdienstleistungen. a.n.g.;43;12
-Sonstige Dienstleistungen. a.n.g.;44;12
+cat_name;cat_id;cat_scat;cat_infl_aug;cat_infl_jul;cat_infl_change_aug;cat_infl_change_jul
+﻿Nahrungsmittel;1;1;114.00;112.80;44562.00;13.00
+Alkoholfreie Getränke;2;2;114.10;113.40;0.60;44575.00
+Alkoholische Getränke;3;2;106.20;106.40;-0.20;44716.00
+Tabak;4;2;107.80;107.70;0.10;44715.00
+Bekleidung;5;3;89.10;92.30;-3.50;0.30
+Schuhe einschließlich Reparatur;6;4;94.40;98.30;-4.00;44715.00
+Gezahlte Wohnungsmieten;7;4;103.20;103.00;0.20;44774.00
+Instandhaltung und Reparatur der Wohnung;8;4;122.50;119.20;44775.00;44727.00
+Postdienste;23;8;107.60;107.60;0.00;7.00
+Wasserversorgung und sonstige Dienstleistungen (Wohnung);9;4;105.10;104.50;0.60;44808.00
+Elektrizität, Gas und andere Brennstoffe;10;4;147.50;143.40;44806.00;36.70
+Einrichtungsgegenstände und Bodenbeläge;11;5;112.50;113.30;-0.70;44813.00
+Heimtextilien Kategorie;12;5;117.80;108.60;44689.00;17.00
+Haushaltsgeräte;13;5;112.90;110.00;44714.00;44690.00
+Glaswaren, Geschirr u. a. Gebrauchsgüter f. d. Haushalt;14;5;111.40;110.60;0.70;44564.00
+Werkzeuge und Geräte für Haus und Garten;15;5;102.60;102.50;0.10;44595.00
+Waren und Dienstleistungen für die laufende Haushaltsf.;16;5;106.50;106.40;0.10;44657.00
+Medizinische Erzeugnisse;17;6;105.30;105.50;-0.20;44744.00
+Ambulante Dienstleistungen;18;6;101.40;101.40;0.00;44621.00
+Krankenhausdienstleistungen;19;6;106.40;106.40;0.00;44745.00
+Kauf von Fahrzeugen;20;7;119.30;118.60;0.60;44726.00
+Betrieb von privaten Verkehrsmitteln;21;7;135.30;143.40;-5.60;44614.00
+Verkehrsdienstleistungen;22;8;115.70;115.20;0.40;44595.00
+Telefonapparate und Telefaxgeräte;24;8;90.00;91.00;-1.10;-6.50
+Telefon- und Telefaxdienste;25;9;97.00;97.20;-0.20;-0.30
+Geräte f. Audiovision, Fotografie und Datenverarbeitung;26;9;100.60;99.90;0.70;-0.50
+Sonstige wesentliche Gebrauchsgüter für Freizeit und Kultur;27;9;106.30;106.30;0.00;3.00
+Sonstige Freizeitartikel u. -geräte, Gartenartikel u. Heimtiere;28;9;107.30;107.20;0.10;44720.00
+Freizeit- und Kulturdienstleistungen;29;9;104.70;104.80;-0.10;44684.00
+Zeitungen, Bücher und Schreibwaren;30;9;108.90;109.40;-0.50;44807.00
+Pauschalreisen Kategorie;31;10;116.70;119.00;-1.90;4.00
+Mittelschule, Schulausflüge;33;10;101.50;101.50;0.00;-1.00
+AHS oder BHS, 9, - 13, Schulstufe;34;10;103.50;103.50;0.00;44563.00
+Studiengebühren;35;10;105.60;105.60;0.00;44595.00
+Kurse;36;11;103.90;104.00;-0.10;44653.00
+Bewirtungsdienstleistungen;37;11;114.10;113.40;0.60;44751.00
+Kindergarten, Volksschule, Internat;32;10;104.90;104.90;0.00;4.00
+Beherbergungsdienstleistungen;38;12;124.50;120.70;44564.00;44752.00
+Körperpflege;39;12;103.60;103.60;0.00;3.00
+Persönliche Gebrauchsgegenstände, a.n.g.;40;12;108.40;108.50;-0.10;44811.00
+Sozialschutz;41;12;104.10;104.10;0.00;44652.00
+Versicherungen;42;12;102.40;102.30;0.10;0.90
+Finanzdienstleistungen. a.n.g. Kategorie;43;12;105.60;105.60;0.00;44654.00
+Sonstige Dienstleistungen, a.n.g.;44;12;105.40;105.40;0.00;3.00
