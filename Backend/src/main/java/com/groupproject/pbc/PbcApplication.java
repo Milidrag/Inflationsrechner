@@ -8,6 +8,7 @@ public class PbcApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PbcApplication.class, args);
+		//test
 	}
 
 }
