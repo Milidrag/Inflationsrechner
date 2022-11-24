@@ -479,7 +479,7 @@ Innerstädtischer Verkehr - Dauerkarte (7 Positionen);1.02;96.70;96.70;0.00;-3.8
 Sonstige gekaufte Verkehrsdienstleistungen;0.05;100.00;100.00;0.00;0.00;7;22;115;1
 Bahn-Schließfachgebühr;0.05;100.00;100.00;0.00;0.00;7;22;74300;0
 NACHRICHTENÜBERMITTLUNG;2.05;95.80;96.20;-0.40;-1.40;8;22;116;2
-Postdienste;0.04;107.60;107.60;0.00;7.00;8;22;117;3
+Postdienste;0.04;107.60;107.60;0.00;7.00;8;23;117;3
 Post- und Kurierdienstleistungen;0.04;107.60;107.60;0.00;7.00;8;23;118;1
 Briefporto. Inland;0.02;101.00;101.00;0.00;0.00;8;23;74500;0
 Briefporto. Ausland;0.00;101.30;101.30;0.00;0.00;8;23;74600;0
@@ -603,6 +603,10 @@ Pauschalreisen Kategorie;2.31;116.70;119.00;-1.90;4.00;9;31;229;1
 Buspauschalreisen im Ausland;0.27;66.80;68.10;-1.90;-31.30;9;31;89700;0
 Städteflug;0.10;111.80;116.70;-4.20;44606.00;9;31;89800;0
 Flugpauschalreisen;1.94;123.80;126.10;-1.80;44719.00;9;31;89900;0
+ERZIEHUNG UND UNTERRICHT;0.98;104.10;104.10;0.00;44683.00;10;31;230;2
+Kindergarten. Volksschule. Internat;0.15;104.90;104.90;0.00;4.00;10;32;231;3
+Dienstl. d. Bildungseinr. d. Elementar- und Primarbereichs;0.15;104.90;104.90;0.00;4.00;10;32;232;1
+Kindergartengebühr (3 Positionen);0.09;105.60;105.60;0.00;44808.00;10;32;233;0
 Volksschule. Non Profit. privat;0.06;104.00;104.00;0.00;44744.00;10;32;90000;0
 Mittelschule. Schulausflüge;0.11;101.50;101.50;0.00;-1.00;10;33;234;3
 Dienstleistungen d. Bildungseinrichtungen d. Sekundarber.;0.11;101.50;101.50;0.00;-1.00;10;33;235;1
@@ -621,6 +625,7 @@ Dienstleistungen nicht einstufbarer Bildungseinrichtungen;0.46;103.90;104.00;-0.
 Nachhilfe;0.09;106.50;106.50;0.00;44597.00;10;36;91000;0
 Sprachkurs;0.10;101.60;101.60;0.00;0.40;10;36;91100;0
 Sprachaufenthalt / Lerncamp;0.04;107.10;107.50;-0.40;44716.00;10;36;91200;0
+Fortbildungskurs. -lehrgang;0.18;103.30;103.30;0.00;44743.00;10;36;91300;0
 EDV-Kurs;0.05;102.90;102.90;0.00;44682.00;10;36;91400;0
 RESTAURANTS UND HOTELS;12.68;115.40;114.20;44562.00;44813.00;11;36;243;2
 Bewirtungsdienstleistungen;11.05;114.10;113.40;0.60;44751.00;11;37;244;3
@@ -647,7 +652,6 @@ Bier. Restaurant;0.49;110.60;110.00;0.50;44627.00;11;37;94600;0
 Wein. Restaurant;0.90;117.50;116.80;0.60;44572.00;11;37;94700;0
 Mineralwasser. Restaurant;0.40;112.90;111.70;44562.00;44781.00;11;37;94800;0
 Apfelsaft. Restaurant;0.14;114.00;112.20;44713.00;44630.00;11;37;94900;0
-Kindergarten. Volksschule. Internat;0.15;104.90;104.90;0.00;4.00;10;32;231;3
 Colagetränk. Restaurant;0.27;110.50;110.20;0.30;44779.00;11;37;95000;0
 Fruchtsaft. Restaurant;0.07;109.80;109.00;0.70;44810.00;11;37;95100;0
 Vorspeise / Pasta. ital. Restaurant;0.23;117.80;117.10;0.60;44604.00;11;37;95500;0
@@ -755,7 +759,3 @@ Rechtsanwalt;0.10;103.40;103.40;0.00;44683.00;12;44;106300;0
 Begräbniskosten. Dienstleistung;0.19;107.50;107.50;0.00;44625.00;12;44;106100;0
 Friedhofsgebühr;0.19;105.40;105.40;0.00;44743.00;12;44;106200;0
 Vermittlergebühren. Mietwohnung;0.04;112.40;112.40;0.00;44747.00;12;44;106400;0
-ERZIEHUNG UND UNTERRICHT;0.98;104.10;104.10;0.00;44683.00;10;31;230;2
-Dienstl. d. Bildungseinr. d. Elementar- und Primarbereichs;0.15;104.90;104.90;0.00;4.00;10;32;232;1
-Kindergartengebühr (3 Positionen);0.09;105.60;105.60;0.00;44808.00;10;32;233;0
-Fortbildungskurs. -lehrgang;0.18;103.30;103.30;0.00;44743.00;10;36;91300;0
