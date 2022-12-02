@@ -18,38 +18,16 @@ public class PbcApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PbcApplication.class, args);
-		//Insert csv data
 
+		//Insert csv data
 		Connection conn = establishDBConnection();
 		ArrayList<String> dataSuperCategory = readCSVFile(new File("sql" + File.separator + "super_category.csv"));
-		//dropScatId(conn);
 		ArrayList<String> dataCategory = readCSVFile(new File("sql" + File.separator + "category.csv"));
-		//dropScatIdCatId(conn);
 		ArrayList<String> dataProduct = readCSVFile(new File("sql" + File.separator + "product.csv"));
 
 		flashDataToDatabase(dataSuperCategory, conn, "super_category");
 		flashDataToDatabase(dataCategory, conn, "category");
 		flashDataToDatabase(dataProduct, conn, "product");
-	}
-
-	private static void dropScatIdCatId(Connection conn) {
-		String sql = "ALTER TABLE product DROP COLUMN cat_id, scat_id";
-		try {
-			Statement stmt = conn.createStatement();
-			stmt.execute(sql);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	private static void dropScatId(Connection conn) {
-		String sql = "ALTER TABLE category DROP COLUMN scat_id";
-		try {
-			Statement stmt = conn.createStatement();
-			stmt.execute(sql);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
 	}
 
 	private static void flashDataToDatabase(ArrayList<String> data, Connection conn, String tableName) {

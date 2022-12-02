@@ -44,12 +44,12 @@ public class Product {
     private int prodSum;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "scatId", nullable = false)
+    @JoinColumn(name = "prod_scat", nullable = false)
     private SuperCategory prodScat;
 
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "catId", nullable = false)
+    @JoinColumn(name = "prod_cat", nullable = false)
     private Category prodCat;
 
 

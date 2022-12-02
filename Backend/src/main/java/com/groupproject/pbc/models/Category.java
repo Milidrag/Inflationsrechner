@@ -29,7 +29,7 @@ public class Category {
     private String catName;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "scatId", nullable = false)
+    @JoinColumn(name = "cat_scat", nullable = false)
     private SuperCategory catScat;
 
     @Column(precision = 10, scale = 2)
