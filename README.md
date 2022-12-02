@@ -1,11 +1,6 @@
 # PBC
 Preisentwicklung für Butter &amp; Co
 
-
-# Without Docker
-## Install Database 
-First install the database "PostgreSQL". You can download it on https://www.postgresql.org/
-
 # In Docker:
 ## Database
 Pull postgres image: docker pull postgres
