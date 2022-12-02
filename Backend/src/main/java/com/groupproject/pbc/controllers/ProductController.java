@@ -6,6 +6,7 @@ import com.groupproject.pbc.models.SuperCategory;
 import com.groupproject.pbc.repositories.CategoryRepository;
 import com.groupproject.pbc.repositories.ProductRepository;
 import com.groupproject.pbc.repositories.SuperCategoryRepository;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -27,16 +28,19 @@ public class ProductController {
     private CategoryRepository categoryRepository;
 
     @GetMapping(path = "/products")
+    @Operation(summary = "Returns all products")
     public @ResponseBody Iterable<Product> getAllProducts() {
         return productRepository.findAll();
     }
 
     @GetMapping(path = "/product-by-name")
+    @Operation(summary = "Returns all categories filtered by name")
     public @ResponseBody Iterable<Product> getSuperCategoryByName(@RequestParam String name) {
         return productRepository.findByProdName(name);
     }
 
     @GetMapping(path = "/product-by-super-category")
+    @Operation(summary = "Returns all categories, filtered by scatId")
     public @ResponseBody Iterable<Product> getCategoryBySuperCategory(@RequestParam Integer scatId) {
         Optional<SuperCategory> superCategory = superCategoryRepository.findById(scatId);
 
@@ -48,6 +52,7 @@ public class ProductController {
     }
 
     @GetMapping(path = "/product-by-category")
+    @Operation(summary = "Returns all products. Filtered by category")
     public @ResponseBody Iterable<Product> getCategoryByCategory(@RequestParam Integer catId) {
         Optional<Category> category = categoryRepository.findById(catId);
 
