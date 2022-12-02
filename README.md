@@ -2,7 +2,7 @@
 Preisentwicklung für Butter &amp; Co
 
 
-#Without Docker
+# Without Docker
 ## Install Database 
 First install the database "PostgreSQL". You can download it on https://www.postgresql.org/
 
