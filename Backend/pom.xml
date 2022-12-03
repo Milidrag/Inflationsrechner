@@ -32,6 +32,11 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>42.5.0</version>
@@ -61,11 +66,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<distributionManagement>
-   		<repository>
-     		 	<id>github</id>
-      			<name>GitHub Packages</name>
-     			<url>https://maven.pkg.github.com/octocat/hello-world</url>
-    		</repository>
-  	</distributionManagement>
 </project>

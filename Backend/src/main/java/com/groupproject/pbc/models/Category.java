@@ -8,13 +8,14 @@ import java.math.BigDecimal;
 public class Category {
 
     public Category(String catName, SuperCategory catScat, BigDecimal catSize, BigDecimal catInflAug,
-                    BigDecimal catInflJul, BigDecimal catInflChangeAug) {
+                    BigDecimal catInflJul, BigDecimal catInflChangeAug, BigDecimal catInflChangeJul) {
         this.catName = catName;
         this.catScat = catScat;
         this.catSize = catSize;
         this.catInflAug = catInflAug;
         this.catInflJul = catInflJul;
         this.catInflChangeAug = catInflChangeAug;
+        this.catInflChangeJul = catInflChangeJul;
     }
 
     public Category() {
@@ -29,7 +30,7 @@ public class Category {
     private String catName;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "scatId", nullable = false)
+    @JoinColumn(name = "cat_scat", nullable = false)
     private SuperCategory catScat;
 
     @Column(precision = 10, scale = 2)
@@ -43,6 +44,10 @@ public class Category {
 
     @Column(precision = 10, scale = 2)
     private BigDecimal catInflChangeAug;
+
+
+    @Column(precision = 10, scale = 2)
+    private BigDecimal catInflChangeJul;
 
     public Integer getCatId() {
         return catId;
@@ -99,4 +104,13 @@ public class Category {
     public void setCatInflChangeAug(BigDecimal catInflChangeAug) {
         this.catInflChangeAug = catInflChangeAug;
     }
+
+    public BigDecimal getCatInflChangeJul() {
+        return catInflChangeJul;
+    }
+
+    public void setCatInflChangeJul(BigDecimal catInflChangeJul) {
+        this.catInflChangeJul = catInflChangeJul;
+    }
+
 }

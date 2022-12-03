@@ -10,7 +10,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(String prodName, BigDecimal prodSize, BigDecimal prodInflAug, BigDecimal prodInflJul, BigDecimal prodInflChangeAug,
+    public Product(String prodName, BigDecimal prodSize, BigDecimal prodInflAug, BigDecimal prodInflJul, BigDecimal prodInflChangeAug, BigDecimal prodInflChangeJul,
                    int prodSum, SuperCategory prodScat, Category prodCat) {
         this.prodName = prodName;
         this.prodSize = prodSize;
@@ -20,6 +20,7 @@ public class Product {
         this.prodSum = prodSum;
         this.prodScat = prodScat;
         this.prodCat = prodCat;
+        this.prodInflChangeJul = prodInflChangeJul;
     }
 
     @Id
@@ -40,16 +41,19 @@ public class Product {
     @Column(precision = 10, scale = 2)
     private BigDecimal prodInflChangeAug;
 
+    @Column(precision = 10, scale = 2)
+    private BigDecimal prodInflChangeJul;
+
     @Column(precision = 1, scale = 0)
     private int prodSum;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "scatId", nullable = false)
+    @JoinColumn(name = "prod_scat", nullable = false)
     private SuperCategory prodScat;
 
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "catId", nullable = false)
+    @JoinColumn(name = "prod_cat", nullable = false)
     private Category prodCat;
 
 
@@ -124,4 +128,13 @@ public class Product {
     public void setProdCat(Category prodCat) {
         this.prodCat = prodCat;
     }
+
+    public BigDecimal getProdInflChangeJul() {
+        return prodInflChangeJul;
+    }
+
+    public void setProdInflChangeJul(BigDecimal prodInflChangeJul) {
+        this.prodInflChangeJul = prodInflChangeJul;
+    }
+
 }

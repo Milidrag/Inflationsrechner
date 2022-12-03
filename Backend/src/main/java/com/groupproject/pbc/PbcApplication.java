@@ -18,16 +18,16 @@ public class PbcApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PbcApplication.class, args);
-		//Insert csv data
 
-/*		Connection conn = establishDBConnection();
+		//Insert csv data
+		Connection conn = establishDBConnection();
 		ArrayList<String> dataSuperCategory = readCSVFile(new File("sql" + File.separator + "super_category.csv"));
 		ArrayList<String> dataCategory = readCSVFile(new File("sql" + File.separator + "category.csv"));
 		ArrayList<String> dataProduct = readCSVFile(new File("sql" + File.separator + "product.csv"));
 
 		flashDataToDatabase(dataSuperCategory, conn, "super_category");
 		flashDataToDatabase(dataCategory, conn, "category");
-		flashDataToDatabase(dataProduct, conn, "product");*/
+		flashDataToDatabase(dataProduct, conn, "product");
 	}
 
 	private static void flashDataToDatabase(ArrayList<String> data, Connection conn, String tableName) {
@@ -39,16 +39,21 @@ public class PbcApplication {
 			String SQLStatement = "";
 			System.out.println("test");
 			boolean first = true;
-			//TODO der INSERT command passt noch nicht. Außerdem muss man noch " " dranhängen beim Einlesen vom ersten Teil vor dem Beistrich
 			for (String date: data){
 				if (first){
 					first = false;
 					continue;
 				}else{
-					SQLadd = " VALUES (" + date + ");";
+					int pos = date.indexOf(";");
+					date = date.substring(0, pos) + "\'" + date.substring(pos);
+					SQLadd = " VALUES (\'" + date + ");";
 					SQLStatement = SQL + SQLadd;
+					SQLStatement = SQLStatement.replace(";",",");
+					SQLStatement = SQLStatement.substring(0, SQLStatement.length() - 1);
+					SQLStatement += ";";
 					System.out.println(SQLStatement);
 					stmt.addBatch(SQLStatement);
+
 				}
 			}
 

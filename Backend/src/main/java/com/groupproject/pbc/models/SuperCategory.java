@@ -7,12 +7,13 @@ import java.math.BigDecimal;
 @Table(name = "super_category")
 public class SuperCategory {
 
-    public SuperCategory(String scatName, BigDecimal scatSize, BigDecimal scatInflAug, BigDecimal scatInflJul, BigDecimal scatInflChangeAug) {
+    public SuperCategory(String scatName, BigDecimal scatSize, BigDecimal scatInflAug, BigDecimal scatInflJul, BigDecimal scatInflChangeAug, BigDecimal scatInflChangeJul) {
         this.scatName = scatName;
         this.scatSize = scatSize;
         this.scatInflAug = scatInflAug;
         this.scatInflJul = scatInflJul;
         this.scatInflChangeAug = scatInflChangeAug;
+        this.scatInflChangeJul = scatInflChangeJul;
     }
 
     public SuperCategory() {
@@ -40,6 +41,9 @@ public class SuperCategory {
 
     @Column(precision = 10, scale = 2)
     private BigDecimal scatInflChangeAug;
+
+    @Column(precision = 10, scale = 2)
+    private BigDecimal scatInflChangeJul;
 
 //    @OneToMany(mappedBy = "superCategory", fetch = FetchType.LAZY,
 //            cascade = CascadeType.MERGE)
@@ -91,5 +95,13 @@ public class SuperCategory {
 
     public void setScatInflChangeAug(BigDecimal scatInflChangeAug) {
         this.scatInflChangeAug = scatInflChangeAug;
+    }
+
+    public BigDecimal getScatInflChangeJul() {
+        return scatInflChangeJul;
+    }
+
+    public void setScatInflChangeJul(BigDecimal scatInflChangeJul) {
+        this.scatInflChangeJul = scatInflChangeJul;
     }
 }
