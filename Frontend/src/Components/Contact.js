@@ -1,8 +1,27 @@
 import '../App.css';
-import React from "react";
+import React, { useRef } from "react";
 import logoImage from '../assets/butter2.png';
+import emailjs from 'emailjs-com'
 
 function Services() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_q27o8xj',
+      'template_xg5dero',
+      form.current,
+      '6B-XvIjIx-rwqoxQ2'
+    ).then(
+      result => console.log(result.text),
+      error => console.log(error.text)
+      );
+
+    e.target.reset();
+  };
+
     return (
         <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -14,7 +33,7 @@ function Services() {
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Kontaktiere uns für weitere preisbezogene Informationen.</h2>
           </div>
-          <form id="contact" className="mt-8 " action="#">
+          <form ref={form} onSubmit={sendEmail} id="contact" className="mt-8 " action="#">
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
@@ -23,7 +42,7 @@ function Services() {
                 </label>
                 <input
                   id="email-address"
-                  name="email"
+                  name="user_email"
                   type="email"
                   autoComplete="email"
                   required
@@ -40,7 +59,7 @@ function Services() {
                 </label>
                 <input
                   id="name"
-                  name="name"
+                  name="user_name"
                   type="text"
                   required
                   className="relative block
@@ -56,7 +75,7 @@ function Services() {
                 </label>
                 <textarea
                   id="text"
-                  name="text"
+                  name="message"
                   maxLength={900}
                   required
                   className="relative block h-96
