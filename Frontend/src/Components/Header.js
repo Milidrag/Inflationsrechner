@@ -13,7 +13,7 @@ function Header() {
     }
     let classNameDependsOnCondtion = isOpen === false ? "hidden" : "";
     return (
-        <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 bg-green">
+        <nav className="bg-white border-gray-200 sticky top-0 w-full px-2 sm:px-4 py-2 bg-green">
             <div className="container flex flex-wrap justify-between items-center mx-auto">
                 <a href="#" className="flex items-center">
                     <img className="mx-4" src={logoImage} alt="PBC logo image: butter" width="30px" height="30px"/>

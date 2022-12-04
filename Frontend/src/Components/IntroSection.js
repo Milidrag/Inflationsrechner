@@ -9,7 +9,7 @@ function IntroSection (){
                 <div className="lg:mt-0 lg:col-span-5 flex">
                     <img src={IntroSectionImage} alt="mockup"/>
                 </div>
-                <div className="place-self-center mr-auto lg:col-span-7">
+                <div className="place-self-center mr-auto pt-8 lg:col-span-7">
                     <h1 className="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl text-green">Preisentwicklung für Butter und Co.</h1>
                     <p className="mb-6 mt-10 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl text-green">Sei informiert und nutze
                     unsere Services um Inflation für Lebensmittel zu verfolgen</p>
