@@ -39,12 +39,13 @@ function Header() {
                                aria-current="page">About</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#" 
                                className="block py-2 pr-4 pl-3 text-light-gray rounded hover:bg-light-green md:border-0 md:p-2 dark:text-light-gray">Services</a>
                         </li>
                         <li>
-                            <a href="#"
-                               className="block py-2 pr-4 pl-3 text-light-gray rounded hover:bg-light-green md:border-0 md:p-2 dark:text-light-gray">Contact</a>
+                            <a href="#contact"
+                               className="block py-2 pr-4 pl-3 text-light-gray rounded hover:bg-light-green md:border-0 md:p-2 dark:text-light-gray"
+                               area-current="contact">Contact</a>
                         </li>
                     </ul>
                 </div>
