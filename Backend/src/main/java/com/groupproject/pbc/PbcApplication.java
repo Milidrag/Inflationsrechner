@@ -69,7 +69,7 @@ public class PbcApplication {
 	private static Connection establishDBConnection() {
 		PGSimpleDataSource source = new PGSimpleDataSource() ;
 		source.setServerNames(new String[] {
-				"localhost"
+				"postgres"
 		});
 		source.setPortNumbers(new int[]{
 				5432

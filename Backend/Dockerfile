@@ -1,8 +1,17 @@
+##build stage
+
+FROM maven:3.8.6-eclipse-temurin-17-alpine AS build
+COPY src /home/app/src
+COPY pom.xml /home/app
+RUN mvn -f /home/app/pom.xml install -DskipTests package
+
+##package stage
+
 FROM openjdk:17-jdk-alpine
 VOLUME /tmp
 ARG JAVA_OPTS
 ENV JAVA_OPTS=$JAVA_OPTS
-COPY target/pbc-0.0.1-SNAPSHOT.jar inflationsrechner.jar
+COPY --from=build /home/app/target/pbc-0.0.1-SNAPSHOT.jar inflationsrechner.jar
 COPY sql sql
 EXPOSE 8080
 #ENTRYPOINT exec java $JAVA_OPTS -jar inflationsrechner.jar

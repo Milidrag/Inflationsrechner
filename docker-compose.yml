@@ -2,12 +2,12 @@ version: '3.4'
 
 services:
   postgres:
-    image: postgres:latest
+    image: 'postgres:13.1-alpine'
     environment:
+      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
       - 5432:5432
-    #network_mode: host
   backend:
     image: backend
     build:
@@ -15,11 +15,9 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 8080:8080
-    #network_mode: host
     depends_on:
       - postgres
     environment:
-      #DB_URL: postgresql://localhost:5432/postgres
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/postgres
   frontend:
     image: frontend
@@ -30,6 +28,5 @@ services:
       NODE_ENV: production 
     ports:
       - 3000:3000
-    #network_mode: host
     depends_on:
       - backend
