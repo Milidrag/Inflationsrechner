@@ -23,7 +23,7 @@ function Services() {
   };
 
     return (
-        <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8" id="contact">
         <div className="max-w-md w-full space-y-8">
           <div>
             <img
@@ -33,7 +33,7 @@ function Services() {
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Kontaktiere uns für weitere preisbezogene Informationen.</h2>
           </div>
-          <form ref={form} onSubmit={sendEmail} id="contact" className="mt-8 " action="#">
+          <form ref={form} onSubmit={sendEmail} className="mt-8 " action="#">
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px">
               <div>

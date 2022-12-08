@@ -11,9 +11,24 @@ function Header() {
             setIsOpen(true)
         }
     }
+    const scrollToContact = () => {
+        const section = document.querySelector( '#contact' );
+        section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+    };
+
+    const scrollToServices= () => {
+        const section = document.querySelector( '#services' );
+        section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+    };
+
+    const scrollToAbout= () => {
+        const section = document.querySelector( '#about' );
+        section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+    };
+
     let classNameDependsOnCondtion = isOpen === false ? "hidden" : "";
     return (
-        <nav className="bg-white border-gray-200 sticky top-0 w-full px-2 sm:px-4 py-2 bg-green">
+        <nav className="bg-white border-gray-200 sticky top-0 z-10 w-full px-2 sm:px-4 py-2 bg-green">
             <div className="container flex flex-wrap justify-between items-center mx-auto">
                 <a href="#" className="flex items-center">
                     <img className="mx-4" src={logoImage} alt="PBC logo image: butter" width="30px" height="30px"/>
@@ -33,20 +48,19 @@ function Header() {
                 <div
                     className={`w-full md:block md:w-auto navbar-default" id="navbar-default ${classNameDependsOnCondtion}`}>
                     <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-light-green md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                        <li>
-                            <a href="#"
-                               className="block py-2 pr-4 pl-3 text-light-gray bg-light-green rounded md:p-2 dark:text-white"
-                               aria-current="page">About</a>
+                        <li className="block py-2 pr-4 pl-3 text-light-gray rounded hover:bg-light-green md:border-0 md:p-2 dark:text-light-gray focused:bg-light-green"
+                               aria-current="page"
+                            onClick={scrollToAbout}
+                        >About
                         </li>
-                        <li>
-                            <a href="#" 
-                               className="block py-2 pr-4 pl-3 text-light-gray rounded hover:bg-light-green md:border-0 md:p-2 dark:text-light-gray">Services</a>
+                        <li className="block py-2 pr-4 pl-3 text-light-gray rounded hover:bg-light-green md:border-0 md:p-2 dark:text-light-gray"
+                        onClick={scrollToServices}
+                        >Services
                         </li>
-                        <li>
-                            <a href="#contact"
-                               className="block py-2 pr-4 pl-3 text-light-gray rounded hover:bg-light-green md:border-0 md:p-2 dark:text-light-gray"
-                               area-current="contact">Contact</a>
-                        </li>
+                        <li className="block py-2 pr-4 pl-3 text-light-gray rounded hover:bg-light-green md:border-0 md:p-2 dark:text-light-gray"
+                               area-current="contact"
+                               onClick={scrollToContact}
+                            >Contact</li>
                     </ul>
                 </div>
             </div>

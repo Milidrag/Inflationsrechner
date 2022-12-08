@@ -4,7 +4,7 @@ import IntroSectionImage from '../assets/introSection_bild.png';
 
 function IntroSection (){
     return(
-        <section>
+        <section id="about">
             <div className="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 justify-center">
                 <div className="lg:mt-0 lg:col-span-5 flex">
                     <img src={IntroSectionImage} alt="mockup"/>
