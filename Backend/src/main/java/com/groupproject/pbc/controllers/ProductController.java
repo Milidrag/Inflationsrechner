@@ -44,10 +44,6 @@ public class ProductController {
     public @ResponseBody Iterable<Product> getCategoryBySuperCategory(@RequestParam Integer scatId) {
         Optional<SuperCategory> superCategory = superCategoryRepository.findById(scatId);
 
-        if (superCategory == null) {
-            //TODO error handling, maybe try catch block?
-        }
-
         return productRepository.findByProdScat(superCategory.get());
     }
 
@@ -56,11 +52,6 @@ public class ProductController {
     public @ResponseBody Iterable<Product> getCategoryByCategory(@RequestParam Integer catId) {
         Optional<Category> category = categoryRepository.findById(catId);
 
-        if (category == null) {
-            //TODO error handling, maybe try catch block?
-        }
-
         return productRepository.findByProdCat(category.get());
     }
-
 }
