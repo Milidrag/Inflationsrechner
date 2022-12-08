@@ -1,12 +1,26 @@
 import '../App.css';
-import productsPhoto from '../assets/thomas-le-pRJhn4MbsMM-unsplash.jpg';
+import productsPhoto from '../assets/default_image_products.jpg';
+import butterPhoto from '../assets/butter_image.jpeg';
+import milkPhoto from '../assets/milk_image.jpeg';
+import colaPhoto from '../assets/cola_image.jpeg';
+import jougurtPhoto from '../assets/jougurt_image.jpg';
 
 function PriceDevCards(props) {
+
     return(
-        <div className="grid grid-cols-8">
+        <div className="grid grid-cols-8 mt-10">
             <div
                 className="bg-white lg:col-start-2 lg:col-span-6 col-start-1 col-span-8 border border-light-green rounded-lg shadow-md">
-                <img className="rounded-t-lg" src={productsPhoto} alt="grossery_shop_vegitables"/>
+                {props.name==="Milchmixgetränk"?
+                    <img className="rounded-t-lg" src={milkPhoto} alt="milk"/>
+                    : props.name==="Butter"?
+                        <img className="rounded-t-lg" src={butterPhoto} alt="butter"/>
+                        :props.name==="Colagetränk"?
+                            <img className="rounded-t-lg" src={colaPhoto} alt="cola"/>
+                            :props.name==="Joghurt natur"?
+                                <img className="rounded-t-lg" src={jougurtPhoto} alt="jougurt_with_berries"/>
+                                : <img className="rounded-t-lg" src={productsPhoto} alt="grossery_shop_vegitables"/>
+                }
                 <div
                     className="pt-5 px-5">
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-green">{props.category}: {props.name}</h5>
