@@ -33,8 +33,3 @@ services:
     #network_mode: host
     depends_on:
       - backend
-
-  
-  
-
-    
