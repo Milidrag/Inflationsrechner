@@ -55,8 +55,7 @@ function Header() {
                         </li>
                         <li className="block py-2 pr-4 pl-3 text-light-gray rounded hover:bg-light-green md:border-0 md:p-2 dark:text-light-gray"
                         onClick={scrollToServices}
-                        >Services
-                        </li>
+                        >Services</li>
                         <li className="block py-2 pr-4 pl-3 text-light-gray rounded hover:bg-light-green md:border-0 md:p-2 dark:text-light-gray"
                                area-current="contact"
                                onClick={scrollToContact}

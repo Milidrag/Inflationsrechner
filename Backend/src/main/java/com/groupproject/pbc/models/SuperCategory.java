@@ -19,11 +19,6 @@ public class SuperCategory {
     public SuperCategory() {
     }
 
-    //TODO Zorana: delete constructor after controller call has been updated
-    public SuperCategory(String scatName) {
-        this.scatName = scatName;
-    }
-
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer scatId;
@@ -45,9 +40,6 @@ public class SuperCategory {
     @Column(precision = 10, scale = 2)
     private BigDecimal scatInflChangeJul;
 
-//    @OneToMany(mappedBy = "superCategory", fetch = FetchType.LAZY,
-//            cascade = CascadeType.MERGE)
-//    private Set<Category> categories;
 
     public Integer getScatId() {
         return scatId;

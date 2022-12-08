@@ -1,31 +1,35 @@
 version: '3.4'
 
 services:
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    #network_mode: host
+  backend:
+    image: backend
+    build:
+      context: backend
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:8080
+    #network_mode: host
+    depends_on:
+      - postgres
+    environment:
+      #DB_URL: postgresql://localhost:5432/postgres
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/postgres
   frontend:
     image: frontend
     build:
       context: Frontend
       dockerfile: ./Dockerfile
     environment:
-      NODE_ENV: production
+      NODE_ENV: production 
     ports:
       - 3000:3000
-  backend:
-    image: backend
-    build:
-      context: backend
-      dockerfile: ./Dockerfile
-    #ports:
-    #  - 3001:3001
-    network_mode: host
-    environment:
-      DB_URL: postgresql://postgres/postgres
-  postgres:
-    image: postgres:latest
-    environment:
-      - POSTGRES_PASSWORD=postgres
-    #ports:
-     # - 5432:5432
-    network_mode: host
-
-    
+    #network_mode: host
+    depends_on:
+      - backend

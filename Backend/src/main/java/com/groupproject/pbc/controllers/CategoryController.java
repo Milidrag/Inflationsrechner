@@ -5,12 +5,10 @@ import com.groupproject.pbc.models.SuperCategory;
 import com.groupproject.pbc.repositories.CategoryRepository;
 import com.groupproject.pbc.repositories.SuperCategoryRepository;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigDecimal;
 import java.util.Optional;
 
 @Controller
@@ -44,10 +42,6 @@ public class CategoryController {
     {
         Optional<SuperCategory> superCategory = superCategoryRepository.findById(scatId);
 
-        if (superCategory == null) {
-            //TODO error handling, maybe try catch block?
-        }
         return categoryRepository.findByCatScat(superCategory);
     }
-
 }
