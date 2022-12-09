@@ -12,3 +12,5 @@ docker-compose up
 To stop and delete the containers running:
 
 docker-compose down
+
+To show the application on the browser open localhost:3000 
