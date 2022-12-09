@@ -37,17 +37,78 @@ PRIMARY KEY(crawl_id)
 
 DROP TABLE crawl;DROP TABLE product; DROP TABLE category; DROP TABLE super_category;
 
-COPY product(prod_name,prod_size,prod_infl_aug,prod_infl_jul,prod_infl_change_aug,prod_infl_change_jul,prod_scat,prod_cat,prod_id)
-FROM 'C:\\Users\\Milo\\Documents\\FH Campus Wien\\3. Semester\\WEB\\Gruppenprojekt\\product.csv'
-DELIMITER ';'
-CSV;
-
-
 
 https://www.youtube.com/watch?v=7cBkXKCY4Ew&ab_channel=JunaidQaiser
 
 https://hevodata.com/learn/postgresql-import-csv/
 
+erste Zeile in product löschen
+im csv (product) alle "," durch "." ersetzen
 
-im csv alle "," durch "." ersetzen
+ALTER TABLE category
+  ADD cat_infl_aug NUMERIC(10,2);
+  
+ALTER TABLE category
+  ADD cat_infl_jul NUMERIC(10,2);
+  
+ALTER TABLE category
+  ADD cat_infl_change_aug NUMERIC(10,2);
+  
+ALTER TABLE category
+  ADD cat_infl_change_jul NUMERIC(10,2);
+  
+ALTER TABLE category
+  ADD cat_size NUMERIC(10,2); 
 
+
+ALTER TABLE super_category
+  ADD scat_infl_aug NUMERIC(10,2);
+  
+ALTER TABLE super_category
+  ADD scat_infl_jul NUMERIC(10,2);
+  
+ALTER TABLE super_category
+  ADD scat_infl_change_aug NUMERIC(10,2);
+  
+ALTER TABLE super_category
+  ADD scat_infl_change_jul NUMERIC(10,2);  
+ 
+ALTER TABLE super_category
+  ADD scat_size NUMERIC(10,2); 
+
+
+UPDATE category cat
+SET cat_infl_aug = prod_infl_aug,
+cat_infl_jul = prod_infl_jul,
+cat_infl_change_aug = prod_infl_change_aug,
+cat_infl_change_jul = prod_infl_change_jul,
+cat_size = prod_size
+FROM product prod
+WHERE prod.prod_cat = cat.cat_id and prod.prod_sum = 3;
+
+
+UPDATE super_category scat
+SET scat_infl_aug = prod_infl_aug,
+scat_infl_jul = prod_infl_jul,
+scat_infl_change_aug = prod_infl_change_aug,
+scat_infl_change_jul = prod_infl_change_jul,
+scat_size = prod_size
+FROM product prod
+WHERE prod.prod_scat = scat.scat_id and prod.prod_sum = 2; 
+
+DELETE FROM super_category WHERE scat_id = 0;
+
+
+DELETE FROM product;
+DELETE FROM category;
+DELETE FROM super_category;
+
+select * from product; 
+select * from category; 
+select * from super_category; 
+
+Folgende Namen geändert in XML 
+'Tabak' 
+'Heimtextilien' 
+'Pauschalreisen' 
+'Finanzdienstleistungen. a.n.g.';
